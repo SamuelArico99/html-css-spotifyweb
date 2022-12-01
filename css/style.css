@@ -9,50 +9,41 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-family: 'Noto Sans', sans-serif;
     font-family: 'PT Sans', sans-serif;
-    display: flex;
 }
-aside{
-    width: 10%;
-    height: 100%;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    position: fixed;
-    z-index: 30;
-}
-header{
+footer{
     width: 100%;
-    height: 7%;
-    background-color: #080b12;
+    height: 100px;
+    background-color: #282828;
     display: flex;
-    justify-content: flex-end;
-    position: fixed;
-    z-index: 29;
+    justify-content: space-between;
 }
 main{
     width: 100%;
-    height: 10000px;
+    height: calc(100vh - 100px);
     background-color: #141922;
+    display: flex;
+}
+aside{
+    width: 250px;
+    height: 100%;
+    background-color: black;
+}
+/* MAIN */
+.content{
+    width: calc(100% - 250px);
+}
+.upgrade{
+    position: sticky;
+    top:0;
+    z-index: 29;
+    background-color: green;
+    display: flex;
+    justify-content: flex-end;
 }
 /* ASIDE */
-.logo {
-    height: 7%;
+
+/* FOOTER */
+.playing , .player , .audio{
+    background-color: chocolate;
+    padding: 30px;
 }
-.sections> ul {
-    list-style: none;
-}
-.sections > ul > li , .create-playlist, .create-playlist > h3, .create-playlist > span , .playlists, .playlists > ul > li {
-    padding: 10px 0;
-}
-.sections > ul > li > a , .playlists > ul > li > a , .create-playlist > h3 , .create-playlist > span{
-    padding-left: 20px;
-}
-.create-playlist > span > button {
-    width: 20%;
-}
-.sections > ul > li > a , .playlists > ul > li > a ,.create-playlist > span{
-    text-decoration: none;
-    color: gray;
-}
-/* HEADER */
