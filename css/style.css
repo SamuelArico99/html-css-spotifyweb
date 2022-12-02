@@ -78,14 +78,12 @@ aside{
 /* ASIDE */
 .nav-top{
     height: calc(100% - 80px);
-    background-color: orange;
     display: flex;
     flex-direction: column;
 }
 .main-menu a img{
     width: 30px;
     vertical-align: middle;
-
 }
 .main-menu a{
     text-decoration: none;
@@ -108,10 +106,39 @@ aside{
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    padding: 20px 20px;
+}
+.playlists h4 {
+    color: white;
+    margin: 5px 0;
+    font-size: 20px;
+}
+.create-playlist{
+    margin: 5px 0;
+    height: 60px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: gray;
+}
+.create-playlist button{
+    font-size: 30px;
+    width: 35px;
+    margin-right: 4px;
+}
+.create-playlist button:hover{
+    cursor: pointer;
 }
 .playlist-list{
     height: 100%;
     overflow: auto;
+}
+.playlist-list li{
+    margin: 7px 0;
+}
+.playlist-list li a{
+    text-decoration: none;
+    color: gray;
 }
 .logo{
     padding: 20px;
