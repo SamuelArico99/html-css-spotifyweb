@@ -36,17 +36,63 @@ aside{
 }
 .card{
     width: calc((100% / 6) - 10px);
-    background-color: chocolate;
-    height: 50px;
+    min-height: 100px;
     margin-right: 10px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
+.card:hover{
+    cursor: pointer;
+}
+.img-container{
+    width: 100%;
+    position: relative;
+    display: block;
+}
+.img-container img{
+    width: 100%;
+    display: block;
+}
+.overlay {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: bold;
+    font-size: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.img-container:hover .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card h3 , .card p{
+    text-align: center;
+}
+.card h3{
+    color: white;
+    margin:10px;
+}
+.card p{
+    color: gray;
+}
 /* MAIN */
 .content{
     width: calc(100% - 250px);
     overflow: auto;
+}
+.do-upgrade{
+    padding: 10px 30px;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
 }
 .upgrade{
     position: sticky;
@@ -61,6 +107,17 @@ aside{
     padding: 0 15px;
     margin-bottom: 30px;
 }
+#recently h2 , #for-you h2, #artists h2 {
+    margin: 10px 0;
+    color: white;
+}
+#recently p , #for-you p, #artists p {
+    margin-bottom: 40px;
+    color: gray;
+}
+#artists .img-container > img{
+    border-radius: 50%;
+}
 .nav-bar{
     display: flex;
     justify-content: center;
@@ -70,6 +127,9 @@ aside{
     list-style: none;
     display: inline-block;
     margin: 20px 30px;
+}
+.active-bottom{
+    border-bottom: 4px solid greenyellow;
 }
 .nav-bar > ul > li > a{
     text-decoration: none;
@@ -94,13 +154,14 @@ aside{
 .active{
     border-left: 4px solid greenyellow;
 }
+.active a span {
+    color: white;
+}
 .main-menu li{
     padding: 5px 0;
-
 }
 .nav-bottom{
     height: 80px;
-    background-color: blue;
 }
 .playlists{
     display: flex;
@@ -149,6 +210,22 @@ aside{
 .small-logo{
     display: none;
 }
+.nav-bottom img{
+    width: 20px;
+    vertical-align: middle;
+}
+.nav-bottom div{
+    margin-left: 20px;
+    margin-top: 10px;
+    color: gray;
+}
+.nav-bottom hr{
+    margin-top: 7px;
+    width: 80%;
+    margin-left: 20px;
+    height: 1px;
+    background-color: gray;
+}
 /* FOOTER */
 .playing , .player , .audio{
     background-color: chocolate;
@@ -169,13 +246,16 @@ aside{
     aside{
         width: 50px;
     }
-    .logo{
+    .logo , .main-menu a{
         padding: 4px 8px;
     }
     .small-logo{
         display: block;
     }
-    .large-logo , .main-menu a span, .playlists{
+    .active{
+        border: none;
+    }
+    .large-logo , .main-menu a span, .playlists , .nav-bottom{
         display: none;
     }
     
