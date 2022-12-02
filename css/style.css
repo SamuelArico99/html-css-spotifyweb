@@ -28,6 +28,7 @@ aside{
     width: 250px;
     min-height: 400px;
     background-color: black;
+    overflow: hidden;
 }
 .row{
     display: flex;
@@ -51,7 +52,7 @@ aside{
     position: sticky;
     top:0;
     z-index: 29;
-    background-color: green;
+    background-color: rgba(8,11,18,0.5);
     display: flex;
     justify-content: flex-end;
     padding: 30px;
@@ -72,23 +73,60 @@ aside{
 }
 .nav-bar > ul > li > a{
     text-decoration: none;
-    color: lightgrey;
+    color: grey;
 }
 /* ASIDE */
 .nav-top{
     height: calc(100% - 80px);
     background-color: orange;
+    display: flex;
+    flex-direction: column;
+}
+.main-menu a img{
+    width: 30px;
+    vertical-align: middle;
+
+}
+.main-menu a{
+    text-decoration: none;
+    color: gray;
+    padding-left:  20px;
+    border-left: 4px solid transparent;
+}
+.active{
+    border-left: 4px solid greenyellow;
+}
+.main-menu li{
+    padding: 5px 0;
+
 }
 .nav-bottom{
     height: 80px;
     background-color: blue;
+}
+.playlists{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.playlist-list{
+    height: 100%;
+    overflow: auto;
+}
+.logo{
+    padding: 20px;
+}
+.large-logo{
+    width: 70%;
+}
+.small-logo{
+    display: none;
 }
 /* FOOTER */
 .playing , .player , .audio{
     background-color: chocolate;
     padding: 30px;
 }
-
 /* RESPONSIVE */
 @media screen and (max-width: 1100px) {
     .card{
@@ -104,6 +142,16 @@ aside{
     aside{
         width: 50px;
     }
+    .logo{
+        padding: 4px 8px;
+    }
+    .small-logo{
+        display: block;
+    }
+    .large-logo , .main-menu a span, .playlists{
+        display: none;
+    }
+    
     .content{
         width: calc(100% - 50px);
     }
