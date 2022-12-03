@@ -88,11 +88,19 @@ aside{
     overflow: auto;
 }
 .do-upgrade{
+    height: 30px;
     padding: 10px 30px;
     border-radius: 25px;
     background-color: transparent;
     border: 1px solid white;
     color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.do-upgrade:hover{
+    cursor: pointer;
+    padding: 20px 40px;
 }
 .upgrade{
     position: sticky;
@@ -101,7 +109,8 @@ aside{
     background-color: rgba(8,11,18,0.5);
     display: flex;
     justify-content: flex-end;
-    padding: 30px;
+    align-items: center;
+    height: 80px;
 }
 #recently , #for-you , #artists{
     padding: 0 15px;
@@ -151,6 +160,9 @@ aside{
     padding-left:  20px;
     border-left: 4px solid transparent;
 }
+.main-menu a:hover{
+    color: white;
+}
 .active{
     border-left: 4px solid greenyellow;
 }
@@ -182,13 +194,19 @@ aside{
     align-items: center;
     color: gray;
 }
+.create-playlist:hover{
+    color: white;
+    cursor: pointer;
+}
 .create-playlist button{
     font-size: 30px;
     width: 35px;
     margin-right: 4px;
+    border: none;
 }
 .create-playlist button:hover{
     cursor: pointer;
+    background-color: gray;
 }
 .playlist-list{
     height: 100%;
@@ -200,6 +218,9 @@ aside{
 .playlist-list li a{
     text-decoration: none;
     color: gray;
+}
+.playlist-list li a:hover{
+    color: white;
 }
 .logo{
     padding: 20px;
@@ -219,17 +240,118 @@ aside{
     margin-top: 10px;
     color: gray;
 }
-.nav-bottom hr{
+.nav-bottom div:hover{
+    color: white;
+    cursor: pointer;
+}
+.gray-line{
     margin-top: 7px;
     width: 80%;
     margin-left: 20px;
     height: 1px;
-    background-color: gray;
+    color: gray;
 }
 /* FOOTER */
 .playing , .player , .audio{
-    background-color: chocolate;
-    padding: 30px;
+    padding: 20px;
+    display: flex;
+}
+.playing{
+    width: 250px;
+}
+.img-player{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+.song-name{
+    width: 100%;
+    margin-left: 5px;
+}
+.song-name h4{
+    margin-bottom: 0;
+    color: white;
+}
+.song-name p{
+    color: gray;
+}
+.song-name p:hover{
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
+}
+.img-player img{
+    width: 100%;
+}
+.icons i{
+    color: gray;
+    cursor: pointer;
+}
+.icons i:hover{
+    color: white;
+}
+.player{
+    width: 500px;
+    flex-direction: column;
+    align-items: center;
+}
+.player-buttons button{
+    font-size: 25px;
+    border: none;
+    color: white;
+    background-color: transparent;
+    margin: 0 7px;
+    cursor: pointer;
+
+}
+.riproduction{
+    display: flex;
+    width: 100%;
+}
+.progress-bar-container{
+    background-color:grey;
+    height: 10px;
+    width: 100%;
+    border-radius: 20px;
+    margin: 10px;
+}
+.riproduction span{
+    margin-top: 10px;
+    font-size: 10px;
+    color: white;
+}
+.progress-bar{
+    width: 25%;
+    height: 10px;
+    background-color: lightgrey;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.progress-bar:hover{
+    background-color: greenyellow;
+    cursor: pointer;
+}
+.circle{
+
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.circle:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.audio{
+    width: 250px;
+    color: white;
+    align-items: center;
+}
+.audio i{
+    margin-right: 10px;
+    cursor: pointer;
 }
 /* RESPONSIVE */
 @media screen and (max-width: 1100px) {
@@ -240,6 +362,13 @@ aside{
 @media screen and (max-width: 700px) {
     .card{
         width: calc((100% / 2) - 10px);
+    }
+    .audio i{
+        margin-right: 5px;
+        font-size: 15px;
+    }
+    .player-buttons button{
+        font-size: 18px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -261,5 +390,9 @@ aside{
     
     .content{
         width: calc(100% - 50px);
+    }
+    .audio i{
+        margin-right: 5px;
+        font-size: 10px;
     }
 }
